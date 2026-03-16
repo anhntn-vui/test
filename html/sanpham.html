@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demon Slayer Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../CSS/css.css" rel="stylesheet">
+    <link href="../CSS/css1.css" rel="stylesheet">
+    <link href="../CSS/navbar.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+   <nav class="navbar" style="background:#292929;">
+        <div class="container">
+            <a href="trangchu.html" class="navbar-brand">
+                <img src="../img/logo.png" alt="Logo" class="navbar-logo">
+                Demon Slayer
+            </a>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" >
+                <a href="trangchu.html" class="nav-link">Trang Chủ</a>
+                <div class="nav-item">
+                    <a href="nhanvat.html" class="nav-link">Nhân Vật <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="nhanvat.html#slayers" class="dropdown-item">
+                            <i class="fas fa-sword"></i> Diệt Quỷ
+                        </a>
+                        <a href="nhanvat.html#hashira" class="dropdown-item">
+                            <i class="fas fa-fire"></i> Trụ Cột
+                        </a>
+                        <a href="nhanvat.html#demons" class="dropdown-item">
+                            <i class="fas fa-skull"></i> Quỷ Dữ
+                        </a>
+
+                    </div>
+                </div>
+                <a class="nav-link active" href="sanpham.html">Sản Phẩm</a>
+
+                
+                
+                <a href="lienhe.html" class="nav-link">Liên Hệ</a>
+                <a class="a" style="display: none;" id="loginLink">
+                    
+                </a>
+                <div class="cart-icon position-fixed top-0 end-0 m-3">
+    <a href="giohang.html">
+        <button class="btn btn-warning rounded-circle" id="cart-button">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge bg-danger rounded-circle" id="cart-count">0</span>
+        </button>
+    </a>
+</div>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div id="loader">
+        <h4>Đang tải trang...</h4>
+        <div class="progress mt-2">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" 
+                 role="progressbar" style="width: 0%;" 
+                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar">
+            </div>
+        </div>
+    </div>
+<div class="container mt-5 text-center" style="padding-top: 100px;">
+        <h1 class="display-4">Demon Slayer Shop</h1>
+        <p class="lead">Khám phá bộ sưu tập mô hình Demon Slayer độc đáo!</p>
+    </div>
+   <div class="container mt-5">
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/spne.jpg" class="card-img-top" alt="Mô hình Demon Slayer - Nezuko">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal1">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Nezuko</h5>
+                        <p class="card-text">680,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Nezuko" 
+                                data-price="680000"
+                                data-image="../img/spne.jpg"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/spino.jpg" class="card-img-top" alt="Mô hình Demon Slayer - Inosuke 10cm">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal2">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Inosuke 10cm</h5>
+                        <p class="card-text">120,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Inosuke 10cm" 
+                                data-price="120000"
+                                data-image="../img/spino.jpg"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/spzen.jpg" class="card-img-top" alt="Mô hình Demon Slayer - Zenitsu 10cm">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal3">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Zenitsu 10cm</h5>
+                        <p class="card-text">120,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Zenitsu 10cm" 
+                                data-price="120000"
+                                data-image="../img/spzen.jpg"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/spshi.png" class="card-img-top" alt="Mô hình Demon Slayer - Shinobu 10cm">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal4">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Shinobu 10cm</h5>
+                        <p class="card-text">120,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Shinobu 10cm" 
+                                data-price="120000"
+                                data-image="../img/spshi.png"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/spnezu.jpg" class="card-img-top" alt="Mô hình Demon Slayer - Nezuko 10cm">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal5">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Nezuko 10cm</h5>
+                        <p class="card-text">120,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Nezuko 10cm" 
+                                data-price="120000"
+                                data-image="../img/spnezu.jpg"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/sptanji.jpg" class="card-img-top" alt="Mô hình Demon Slayer - Tanjiro 10cm">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal6">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Tanjiro 10cm</h5>
+                        <p class="card-text">120,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Tanjiro 10cm" 
+                                data-price="120000"
+                                data-image="../img/sptanji.jpg"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/spren.jpg" class="card-img-top" alt="Mô hình Demon Slayer - Rengoku">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal7">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Rengoku</h5>
+                        <p class="card-text">680,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Rengoku" 
+                                data-price="680000"
+                                data-image="../img/ren.jpg"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/spmui.jpg" class="card-img-top" alt="Mô hình Demon Slayer - Muichiro">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal8">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Muichiro</h5>
+                        <p class="card-text">680,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Muichiro" 
+                                data-price="680000"
+                                data-image="../img/spmui.jpg"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="../img/spten.jpg" class="card-img-top" alt="Mô hình Demon Slayer - Tengen">
+                        <div class="card-hover-content">
+                            <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#productModal9">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mô hình Demon Slayer - Tengen</h5>
+                        <p class="card-text">680,000₫</p>
+                        <button class="btn btn-primary add-to-cart w-100" 
+                                data-name="Mô hình Demon Slayer - Tengen" 
+                                data-price="680000"
+                                data-image="../img/ten.jpg"
+                                data-category="Mô hình">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Product Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="productModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Nezuko</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/spne.jpg" class="img-fluid" alt="Mô hình Demon Slayer - Nezuko">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 25cm</p>
+                            <p>Phiên bản: Limited Edition</p>
+                            <h5>Giá: 680,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Nezuko" 
+                                    data-price="680000"
+                                    data-image="../img/spne.jpg"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 to 9 (same structure as Modal 1, change image source and product details accordingly) -->
+    <div class="modal fade" id="productModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Inosuke 10cm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/spino.jpg" class="img-fluid" alt="Mô hình Demon Slayer - Inosuke 10cm">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 10cm</p>
+                            <p>Phiên bản: Standard</p>
+                            <h5>Giá: 120,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Inosuke 10cm" 
+                                    data-price="120000"
+                                    data-image="../img/spino.jpg"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Zenitsu 10cm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/spzen.jpg" class="img-fluid" alt="Mô hình Demon Slayer - Zenitsu 10cm">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 10cm</p>
+                            <p>Phiên bản: Standard</p>
+                            <h5>Giá: 120,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Zenitsu 10cm" 
+                                    data-price="120000"
+                                    data-image="../img/spzen.jpg"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal4" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Shinobu 10cm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/spshi.png" class="img-fluid" alt="Mô hình Demon Slayer - Shinobu 10cm">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 10cm</p>
+                            <p>Phiên bản: Standard</p>
+                            <h5>Giá: 120,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Shinobu 10cm" 
+                                    data-price="120000"
+                                    data-image="../img/spshi.png"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal5" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Nezuko 10cm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/spnezu.jpg" class="img-fluid" alt="Mô hình Demon Slayer - Nezuko 10cm">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 10cm</p>
+                            <p>Phiên bản: Standard</p>
+                            <h5>Giá: 120,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Nezuko 10cm" 
+                                    data-price="120000"
+                                    data-image="../img/spnezu.jpg"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal6" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Tanjiro 10cm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/sptanji.jpg" class="img-fluid" alt="Mô hình Demon Slayer - Tanjiro 10cm">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 10cm</p>
+                            <p>Phiên bản: Standard</p>
+                            <h5>Giá: 120,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Tanjiro 10cm" 
+                                    data-price="120000"
+                                    data-image="../img/sptanji.jpg"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal7" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Rengoku</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/spgyu.jpg" class="img-fluid" alt="Mô hình Demon Slayer - Rengoku">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 25cm</p>
+                            <p>Phiên bản: Limited Edition</p>
+                            <h5>Giá: 680,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Rengoku" 
+                                    data-price="680000"
+                                    data-image="../img/spgyu.jpg"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal8" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Muichiro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/spmui.jpg" class="img-fluid" alt="Mô hình Demon Slayer - Muichiro">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 25cm</p>
+                            <p>Phiên bản: Limited Edition</p>
+                            <h5>Giá: 680,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Muichiro" 
+                                    data-price="680000"
+                                    data-image="../img/spmui.jpg"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal9" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mô hình Demon Slayer - Tengen</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../img/spten.jpg" class="img-fluid" alt="Mô hình Demon Slayer - Tengen">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Chi tiết sản phẩm</h4>
+                            <p>Chất liệu: PVC cao cấp</p>
+                            <p>Kích thước: 25cm</p>
+                            <p>Phiên bản: Limited Edition</p>
+                            <h5>Giá: 680,000₫</h5>
+                            <button class="btn btn-primary add-to-cart mt-3" 
+                                    data-name="Mô hình Demon Slayer - Tengen" 
+                                    data-price="680000"
+                                    data-image="../img/ten.jpg"
+                                    data-category="Mô hình">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Demon Slayer</h5>
+                    <p class="footer-desc">Chính thức được chuyển thể từ manga cùng tên của tác giả Koyoharu Gotouge.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Liên Kết Nhanh</h5>
+                    <ul class="footer-links">
+                        <li><a href="trangchu.html"><i class="fas fa-chevron-right"></i> Trang Chủ</a></li>
+                        <li><a href="trangchu.html#news"><i class="fas fa-chevron-right"></i> Tin Tức</a></li>
+                        <li><a href="trangchu.html#characters"><i class="fas fa-chevron-right"></i> Nhân Vật</a></li>
+                        <li><a href="trangchu.html#story"><i class="fas fa-chevron-right"></i> Câu Chuyện</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Theo Dõi & Liên Hệ</h5>
+                    <div class="footer-social mb-4">
+                        <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2024 Demon Slayer. All rights reserved.</p>
+                <small>Developed with <i class="fas fa-heart text-danger"></i> by Demon Slayer Fans</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/js.js"></script>
+    <script src="../JS/js1.js"></script>
+</body>
+</html>

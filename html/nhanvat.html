@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimetsu no Yaiba - Danh Sách Nhân Vật</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/nhanvat.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div class="hero-container" id="hero">
+        <div class="screen-split left"></div>
+        <div class="screen-split right"></div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Kimetsu no Yaiba</h1>
+            <p class="hero-subtitle">Khám phá thế giới của những kiếm sĩ diệt quỷ</p>
+            <a href="#characters" class="cta-button">Xem Nhân Vật</a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="trangchu.html">Demon Slayer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="trangchu.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#characters">Nhân Vật</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sanpham.html">Sản Phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dangnhap.html" id="loginBtn">Đăng Nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section class="character-section" id="characters">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Danh Sách Nhân Vật</h2>
+
+                <!-- Filter Section -->
+                <div class="filter-section" data-aos="fade-up">
+                    <div class="container">
+                        <form class="filter-form">
+                            <div class="form-group">
+                                <select class="form-control" id="filterRole">
+                                    <option value="">Tất cả vai trò</option>
+                                    <option value="Kiếm Sĩ">Kiếm Sĩ</option>
+                                    <option value="Trụ Cột">Trụ Cột</option>
+                                    <option value="Quỷ">Quỷ</option>
+                                    <option value="Thượng Huyền">Thượng Huyền</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="searchName" placeholder="Tìm theo tên...">
+                            </div>
+                            <button type="button" class="btn" id="filterBtn">Lọc Kết Quả</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Character Cards -->
+                <div class="row" id="characterContainer">
+                    <!-- Character Card 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/tan.jpg" class="character-img" alt="Kamado Tanjiro">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Kamado Tanjiro</h3>
+                                <p class="character-role">Kiếm Sĩ</p>
+                                <p class="character-desc">Nhân vật chính của bộ truyện, người có khả năng khứu giác siêu việt và sử dụng Hơi Thở Nước để chiến đấu.</p>
+                                <a href="tan.html" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Card 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/zu.jpg" class="character-img" alt="Kamado Nezuko">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Kamado Nezuko</h3>
+                                <p class="character-role">Quỷ</p>
+                                <p class="character-desc">Em gái của Tanjiro, bị biến thành quỷ nhưng vẫn giữ được ý thức của con người. Có khả năng đặc biệt thay đổi kích thước cơ thể.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Card 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/zen.jpg" class="character-img" alt="Agatsuma Zenitsu">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Agatsuma Zenitsu</h3>
+                                <p class="character-role">Kiếm Sĩ</p>
+                                <p class="character-desc">Người bạn của Tanjiro, thường tỏ ra nhát gan nhưng khi ngủ lại có sức mạnh kinh người. Sử dụng Hơi Thở Sấm Sét.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Card 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/ino.jpg" class="character-img" alt="Hashibira Inosuke">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Hashibira Inosuke</h3>
+                                <p class="character-role">Kiếm Sĩ</p>
+                                <p class="character-desc">Đồng đội của Tanjiro với tính cách hoang dã và mạnh mẽ. Luôn đeo mặt nạ lợn rừng và sử dụng Hơi Thở Thú.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Card 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/gi.jpg" class="character-img" alt="Tomioka Giyu">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Tomioka Giyu</h3>
+                                <p class="character-role">Trụ Cột</p>
+                                <p class="character-desc">Trụ Cột Nước của Đoàn Diệt Quỷ, người đã giới thiệu Tanjiro vào tổ chức. Sử dụng Hơi Thở Nước ở trình độ cao nhất.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Card 6 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/shi.jpg" class="character-img" alt="Kocho Shinobu">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Kocho Shinobu</h3>
+                                <p class="character-role">Trụ Cột</p>
+                                <p class="character-desc">Trụ Cột Côn Trùng, người có tính cách dịu dàng nhưng ẩn chứa sự thù hận sâu sắc với loài quỷ. Sử dụng thuốc độc thay vì chém đứt đầu quỷ.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Card 7 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/ne.jpg" class="character-img" alt="Shinazugawa Sanemi">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Shinazugawa Sanemi</h3>
+                                <p class="character-role">Trụ Cột</p>
+                                <p class="character-desc">Trụ Cột Gió với tính cách hung hăng và nóng nảy. Có cơ thể đặc biệt thu hút quỷ và sử dụng Hơi Thở Gió mạnh mẽ.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Card 8 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/ren.jpg" class="character-img" alt="Rengoku Kyojuro">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Rengoku Kyojuro</h3>
+                                <p class="character-role">Trụ Cột</p>
+                                <p class="character-desc">Trụ Cột Lửa với tinh thần nhiệt huyết và lòng dũng cảm. Người luôn nỗ lực hết mình để bảo vệ người dân khỏi quỷ dữ.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Card 9 -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/mu.jpg" class="character-img" alt="Kibutsuji Muzan">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Kibutsuji Muzan</h3>
+                                <p class="character-role">Thượng Huyền</p>
+                                <p class="character-desc">Quỷ đầu tiên và mạnh nhất, người đã biến Nezuko thành quỷ. Là kẻ thù chính của Đoàn Diệt Quỷ và mục tiêu cuối cùng của Tanjiro.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 2 Characters -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-2" style="display: none;" data-aos="fade-up">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/a.jpg" class="character-img" alt="Akaza">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Akaza</h3>
+                                <p class="character-role">Thượng Huyền Tam</p>
+                                <p class="character-desc">Thượng Huyền Tam, sở hữu Huyết Quỷ Thuật thao túng không gian và phát hiện chiến ý. Kẻ thù đáng gờm của Rengoku Kyojuro.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 page-2" style="display: none;" data-aos="fade-up" data-aos-delay="100">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/ka.jpg" class="character-img" alt="Tsuyuri Kanao">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Tsuyuri Kanao</h3>
+                                <p class="character-role">Kiếm Sĩ</p>
+                                <p class="character-desc">Đệ tử của Shinobu Kocho, có đôi mắt đặc biệt có thể theo dõi chuyển động siêu nhanh. Sử dụng Hơi Thở Hoa.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 page-2" style="display: none;" data-aos="fade-up" data-aos-delay="200">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/da.jpg" class="character-img" alt="Daki">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Daki</h3>
+                                <p class="character-role">Thượng Huyền Lục</p>
+                                <p class="character-desc">Thượng Huyền Lục, cùng với anh trai Gyutaro tạo thành một cặp quỷ đầy nguy hiểm. Sử dụng obi để tấn công và bắt giữ con mồi.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 3 Characters -->
+                    <div class="col-lg-4 col-md-6 mb-4 page-3" style="display: none;" data-aos="fade-up">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/u.jpg" class="character-img" alt="Tengen Uzui">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Tengen Uzui</h3>
+                                <p class="character-role">Trụ Cột</p>
+                                <p class="character-desc">Trụ Cột Âm Thanh, cựu ninja với phong cách sống "phô trương". Sử dụng Hơi Thở Âm Thanh kết hợp với vũ khí đặc biệt.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 page-3" style="display: none;" data-aos="fade-up" data-aos-delay="100">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/th1.jpg" class="character-img" alt="Kokushibo">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Kokushibo</h3>
+                                <p class="character-role">Thượng Huyền Nhất</p>
+                                <p class="character-desc">Thượng Huyền mạnh nhất, từng là một kiếm sĩ và là anh em với Yoriichi. Sở hữu kỹ năng kiếm thuật siêu việt.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 page-3" style="display: none;" data-aos="fade-up" data-aos-delay="200">
+                        <div class="character-card">
+                            <div class="character-img-container">
+                                <img src="../img/mit.jpg" class="character-img" alt="Mitsuri Kanroji">
+                            </div>
+                            <div class="character-info">
+                                <h3 class="character-name">Mitsuri Kanroji</h3>
+                                <p class="character-role">Trụ Cột</p>
+                                <p class="character-desc">Trụ Cột Tình Yêu với sức mạnh cơ bắp đáng kinh ngạc. Sử dụng Hơi Thở Tình Yêu và thanh kiếm dẻo dai độc đáo.</p>
+                                <a href="#" class="view-details">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav aria-label="Character pagination" class="pagination-container" data-aos="fade-up">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0);" aria-label="Previous" onclick="changePage('prev')">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="javascript:void(0);" onclick="changePage(1)">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="changePage(2)">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="changePage(3)">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0);" aria-label="Next" onclick="changePage('next')">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Giới Thiệu Kimetsu no Yaiba</h2>
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <p>Kimetsu no Yaiba (鬼滅の刃) hay Thanh Gươm Diệt Quỷ là một bộ manga Nhật Bản được viết và minh họa bởi Koyoharu Gotouge. Câu chuyện kể về Kamado Tanjiro, một cậu bé trở thành thợ săn quỷ sau khi gia đình cậu bị tàn sát và em gái Nezuko bị biến thành quỷ.</p>
+                        <p>Bộ truyện được xuất bản trên tạp chí Weekly Shōnen Jump của Shueisha từ tháng 2 năm 2016 đến tháng 5 năm 2020, và đã được tổng hợp thành 23 tập tankōbon.</p>
+                        <p>Năm 2019, manga được chuyển thể thành anime do studio ufotable sản xuất và đã nhanh chóng trở thành hiện tượng toàn cầu, đặc biệt là với bộ phim điện ảnh "Mugen Train" trở thành phim có doanh thu cao nhất mọi thời đại tại Nhật Bản.</p>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h4 class="mb-3">Thông tin chính</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>Tác giả:</strong> Koyoharu Gotouge</li>
+                                    <li class="mb-2"><strong>Thể loại:</strong> Hành động, Phiêu lưu, Kỳ ảo tối</li>
+                                    <li class="mb-2"><strong>Xuất bản:</strong> 2016 - 2020</li>
+                                    <li class="mb-2"><strong>Số tập manga:</strong> 23 tập</li>
+                                    <li class="mb-2"><strong>Anime:</strong> 3 mùa (Đến 2023)</li>
+                                    <li class="mb-2"><strong>Phim điện ảnh:</strong> Kimetsu no Yaiba: Mugen Train (2020)</li>
+                                </ul>
+                                <p class="mt-3">Bộ truyện nổi tiếng với hệ thống chiến đấu dựa trên "Hơi Thở" độc đáo và những nhân vật có cá tính mạnh mẽ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <h4 class="footer-title">Demon Slayer</h4>
+                        <p>Khám phá thế giới của những kiếm sĩ diệt quỷ qua manga, anime và các sản phẩm chính hãng.</p>
+                        <div class="footer-social mt-4">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h5 class="footer-title">Liên Kết</h5>
+                        <div class="footer-links">
+                            <a href="trangchu.html">Trang Chủ</a>
+                            <a href="#characters">Nhân Vật</a>
+                            <a href="sanpham.html">Sản Phẩm</a>
+                            <a href="#about">Giới Thiệu</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Thông Tin</h5>
+                        <div class="footer-links">
+                            <a href="#">Điều khoản sử dụng</a>
+                            <a href="#">Chính sách bảo mật</a>
+                            <a href="#">Chính sách giao hàng</a>
+                            <a href="#">Liên hệ</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 mb-4">
+                        <h5 class="footer-title">Đăng Ký Nhận Tin</h5>
+                        <p>Nhận thông tin cập nhật về Kimetsu no Yaiba</p>
+                        <div class="input-group mt-3">
+                            <input type="email" class="form-control" placeholder="Email của bạn">
+                            <button class="btn btn-primary">Đăng Ký</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom text-center">
+                    <p class="mb-0">&copy; 2024 Demon Slayer. Kimetsu no Yaiba. NgocMai.</p>
+                    <small>Developed with <i class="fas fa-heart text-danger"></i> by - Mayar - </small>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="btn_pagetop is-show">
+        <button class="btn back-to-top" onclick="scrollToTop()">
+            <div class="btn_pagetop-chara">
+                <img src="../img/btn_pagetop_chara_3.png" alt="Về đầu trang" id="btn_pagetop-chara" onmousedown="return false" oncopy="return false" onselectstart="return false" oncontextmenu="return false">
+            </div>
+            <div class="btn_pagetop-icon">
+                <img src="../img/btn_pagetop_base.png" alt="Icon Về đầu trang" onmousedown="return false" oncopy="return false" onselectstart="return false" oncontextmenu="return false">
+            </div>
+        </button>
+    </div>
+    <script src="../JS/nhanvat.js">       
+    </script>
+</body>
+</html>
