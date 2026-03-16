@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ôn tập</title>
+	<style type="text/css">
+		body{
+			width: 60%;
+			background-color:linear-gradient(180deg,#eef2ff,#f8fafc);
+			margin: 0 auto;
+			font-family: arial;
+		}
+		.tren{
+			width: 100%;
+			height: 100px;
+			float: left;
+			background-color: rgb(51,167,181);
+			background-size: 100% 100px;
+			border-radius: 12px;
+			text-align: center;
+			color: white;
+		}
+		.tren img{
+			width: 80px;
+			height: 80px;
+			margin: 10px 10px;
+			float: left;
+		}
+		h1{
+			color: black;
+			text-align: center;
+			margin-top: 30px;
+		}
+		.trai{
+			width: 30%;
+			float: left;
+			margin-top: 50px;
+			line-height: 25pt;
+		}
+		ul{
+			list-style: none;
+		}
+		li{
+			margin-left: -30px;
+			
+		}
+		a{
+			text-decoration: none;
+		}
+		a:hover{
+			color: purple;
+		}
+		.khungphai{
+			width: 70%;
+			float: left;
+		}
+		.giua{
+			width: 28%;
+			float: left;
+			line-height: 27pt;
+			text-align: left;
+			margin-right: 10px;
+			margin-left: 20px;
+
+		}
+		.phai{
+			width: 65%;
+			float: left;
+			list-style: circle;
+	}
+		h2{
+			
+		}
+		.cuoi{
+			margin-top: 0px;
+			width: 100%;
+			height: 70px;
+			background-color: rgb(51,167,181);
+			float: left;
+			color: #fff;
+			border-radius: 12px;
+		}
+		.mausac{
+			color: red;
+		}
+		input{
+			margin: 5px 0px;
+		}
+		select{
+			margin: 8px 0px;
+			height: 16pt;
+		}
+		input[type="radio"]
+		{
+			margin: 10px 0px;
+
+		}
+		input[type="text"], input[type="password"]
+		{
+			height: 20px;
+		}
+		input[type="submit"]{
+			background:#3b82f6;
+			color:#fff;
+			border:none;
+			border-radius:6px;
+			height:30px;
+			padding:0 14px;
+			font-weight:bold;
+			cursor:pointer;
+		}
+		input[type="reset"]{
+			background:#22c55e;
+			color:#fff;
+			border:none;
+			border-radius:6px;
+			height:30px;
+			padding:0 14px;
+			font-weight:bold;
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body>
+<form name="form1">
+	<div class="tren">
+		<img src="https://vui.edu.vn/media/images/s-300/logo.jpg">
+		<H4>KHOA CÔNG NGHỆ THÔNG TIN - TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP VIỆT TRÌ</H4>
+		<h3 style="margin-top: -10px;">CỔNG THÔNG TIN SINH VIÊN </h3>
+		
+	</div>
+
+	<div class="khungphai">
+		<h3 align="center" style="color:#3b82f6;"> ĐĂNG KÝ TÀI KHOẢN</h3>
+	<div class="giua">
+		Tên đăng nhập: <span class="mausac"> </span><br>
+		Mật khẩu:<br>
+		Mã sinh viên:<br>
+		Họ tên<br>
+		Giới tính:<br>
+		Nơi sinh: <br>
+		Thông tin khác: <span class="mausac"> </span><br>
+		<br>
+	</div>
+	<div class="phai">
+		<input type="text" size=30 name="username" placeholder="Nhập tên đăng nhập"><br>
+		<input type="password" size=30 name ="password" placeholder="Nhập mật khẩu"><br>
+		<input type="text" name="masv" size="30" placeholder="Mã sinh viên" > <br>
+		<input type="text" name="hoten" size="30" placeholder="Họ tên của bạn" > <br>
+		<input type="radio" checked="">&nbspNam &nbsp <input type="radio" name="">&nbspNữ <br>
+		<select name="noisinh">
+			<option value="bd"selected>Lào Cai</option>
+			<option value="gv">Hà Nội</option>
+			<option value="ca">Phú Thọ</option>
+		</select><br>		
+	<textarea cols="40" rows="5" name="noidung" id="noidung"></textarea><br>
+	<input type="submit" value="Đăng ký" onclick="kiemtra();">
+	<input type="reset" value="Nhập lại" ><br>
+	</div>
+	</div>
+	<div class="trai">
+		<ul>
+			<li> <a href="https://www.google.com/">Giới thiệu</a></li>
+			<li> <a href="https://dantri.com.vn/kinh-doanh.htm">Đào tạo</a></li>
+			<li> <a href="d2.html">Nghiên cứu khoa học</a></li>
+			<li> <a href="d2.html">Tuyển sinh</a></li>
+			<li> <a href="d2.html">Văn bản-biểu mẫu</a></li>
+			<li> <a href="d2.html">Liên hệ</a></li>
+			
+		</ul>
+	</div>
+	<div class="cuoi">
+		<h4 align="center"> Website được tạo bởi: &copy Họ tên sinh viên - Lớp</h4>
+	</div>
+</form>
+</body>
+</html>
